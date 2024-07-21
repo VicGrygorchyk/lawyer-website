@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header title='Софяк та партнери' phone='0372 555-555' address='місто Чернівці, вулиця Прутська, 16'/>
-      <Content carouselInterval={70000} />
+      <Content carouselInterval={7000} />
       <Footer />
     </div>
   );

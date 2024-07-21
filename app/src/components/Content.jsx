@@ -3,34 +3,9 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Carousel } from "react-responsive-carousel";
-import Image from "react-bootstrap/Image";
+import { LawyersCarousel } from "./Carousel";
 import "./Content.css";
-import lawyers1 from "../assets/lawyers1.png";
-import lawyers2 from "../assets/lawyers2.png";
-import lawyers3 from "../assets/lawyers3.png";
-import lawyers4 from "../assets/lawyers4.png";
 
-const images = [
-  {
-    URL: lawyers1,
-    labelHeader: "Наші досягнення",
-    labelText: "Захистили N клієнтів від кримінального переслідування",
-  },
-  {
-    URL: lawyers2,
-    labelHeader: "Захист від кримінального переслідування",
-    labelText: "Ми вас захистимо ніжно і надійсно",
-  },{
-    URL: lawyers3,
-    labelHeader: "Цивільні справи",
-    labelText: "Краще нас лише Мама Тереза",
-  },{
-    URL: lawyers4,
-    labelHeader: "Спори з податковим органом",
-    labelText: "Що там спорити і так ясно, що їхні вимоги незаконні",
-  },
-];
 
 export class Content extends React.Component {
   constructor(props) {
@@ -51,7 +26,7 @@ export class Content extends React.Component {
     window.removeEventListener("resize", this.updateCarouselHeight);
   }
 
-  updateCarouselHeight = (time=200) => {
+  updateCarouselHeight = (time = 200) => {
     setTimeout(() => {
       if (this.carouselRef.current) {
         const height = this.carouselRef.current.carouselWrapperRef.offsetHeight;
@@ -66,31 +41,10 @@ export class Content extends React.Component {
 
     return (
       <main className="main" style={{ marginTop: carouselHeight }}>
-        <div className="box">
-          <Carousel
-            animationHandler="fade"
-            ref={this.carouselRef}
-            className="carousel-fullwidth"
-            interval={carouselInterval}
-            autoPlay={true}
-            showArrows={false}
-            showStatus={false}
-            showThumbs={false}
-            transitionTime={1000}
-            infiniteLoop={true}
-            useKeyboardArrows={true}
-          >
-            {images.map((obj, index) => (
-              <div className="slide" key={index}>
-                <Image alt="lawyers image for the carousel" src={obj.URL} />
-                <div className="legend carousel-caption">
-                  <h3 className="carousel-caption-text">{obj.labelHeader}</h3>
-                  <p className="carousel-caption-text">{obj.labelText}</p>
-                </div>
-              </div>
-            ))}
-          </Carousel>
-        </div>
+        <LawyersCarousel
+          carouselRef={this.carouselRef}
+          carouselInterval={carouselInterval}
+        ></LawyersCarousel>
         <Container className="container-fluid container-content">
           <Row>
             <Col className="col-12 main-section-text">
