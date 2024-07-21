@@ -23,24 +23,24 @@ export class Content extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.updateCarouselHeight();
-  //   window.addEventListener('resize', this.updateCarouselHeight);
-  // }
+  componentDidMount() {
+    this.updateCarouselHeight();
+    window.addEventListener('resize', this.updateCarouselHeight);
+  }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener('resize', this.updateCarouselHeight);
-  // }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateCarouselHeight);
+  }
 
-  // updateCarouselHeight = () => {
-  //   setTimeout(() => {
-  //     if (this.carouselRef.current) {
-  //       const height = this.carouselRef.current.carouselWrapperRef.offsetHeight;
-  //       console.log('Calculated carousel height:', height);
-  //       this.setState({ carouselHeight: height });
-  //     }
-  //   }, 0);
-  // };
+  updateCarouselHeight = () => {
+    setTimeout(() => {
+      if (this.carouselRef.current) {
+        const height = this.carouselRef.current.carouselWrapperRef.offsetHeight;
+        console.log('Calculated carousel height:', height);
+        this.setState({ carouselHeight: height });
+      }
+    }, 0);
+  };
 
   render() {
     const { carouselInterval } = this.props;
@@ -49,13 +49,16 @@ export class Content extends React.Component {
     return (
       <main className="main" style={{ marginTop: carouselHeight }}>
         <div className="box">
-          <Carousel 
+          <Carousel
+            animationHandler="fade"
+            ref={this.carouselRef}
             className='carousel-fullwidth'
             interval={carouselInterval}
             autoPlay={true}
             showArrows={false}
             showStatus={false}
             showThumbs={false}
+            transitionTime={1000}
             infiniteLoop={true} useKeyboardArrows={true}>
             {images.map((URL, index) => (
               <div className="slide">
