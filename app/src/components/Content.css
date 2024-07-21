@@ -24,17 +24,20 @@ main {
 }
 
 .carousel .slide .legend {
-  opacity: 0.8;
+  opacity: 0.75;
   font-size: calc(14px + 1vmin);
 }
 
 .carousel-caption {
   bottom: auto;
-  background: rgba(0, 0, 0, 0.1);
 }
 
 .carousel-caption-text {
-  color: red;
+  color: #974140;
+}
+
+.carousel-caption-text:hover {
+  color: #7f181b;
 }
 
 .main {

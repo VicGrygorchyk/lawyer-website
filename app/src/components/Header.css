@@ -1,4 +1,3 @@
-
 .header {
   font-size: calc(10px + 1vmin);
   padding: 5px;
@@ -13,35 +12,36 @@
   }
 }
 
-
 .office-info {
   width: fit-content;
   font-size: calc(7px + 1vmin);
-  background: rgb(0, 0, 0, 0.70);
+  background: rgb(0, 0, 0, 0.2);
   color: white;
   text-align: justify;
   margin: 5px;
 }
 
-/* Header.css */
-/* .navbar {
-  border-bottom: 2px solid black;
-} */
+.navbar {
+  width: fit-content;
+  background: rgb(0, 0, 0, 0.3);
+}
 
-.nav-link {
+.nav-link,
+.navbar-brand {
   position: relative;
-  color: black;
+  color: white;
+  font-size: calc(15px + 1vmin);
   padding-bottom: 5px;
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color: rgb(255, 88, 88);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -50,6 +50,7 @@
   transform: scaleX(1);
 }
 
-.nav-link:hover {
-  color: #007bff; /* Change this to the desired highlight color */
+.nav-link:hover,
+.navbar-brand:hover {
+  color: rgb(255, 88, 88);
 }

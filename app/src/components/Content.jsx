@@ -39,6 +39,7 @@ export class Content extends React.Component {
     this.state = {
       carouselHeight: 0,
     };
+    this.updateCarouselHeight(0);
   }
 
   componentDidMount() {
@@ -50,13 +51,13 @@ export class Content extends React.Component {
     window.removeEventListener("resize", this.updateCarouselHeight);
   }
 
-  updateCarouselHeight = () => {
+  updateCarouselHeight = (time=200) => {
     setTimeout(() => {
       if (this.carouselRef.current) {
         const height = this.carouselRef.current.carouselWrapperRef.offsetHeight;
         this.setState({ carouselHeight: height });
       }
-    }, 200);
+    }, time);
   };
 
   render() {
