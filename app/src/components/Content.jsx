@@ -36,10 +36,9 @@ export class Content extends React.Component {
     setTimeout(() => {
       if (this.carouselRef.current) {
         const height = this.carouselRef.current.carouselWrapperRef.offsetHeight;
-        console.log('Calculated carousel height:', height);
         this.setState({ carouselHeight: height });
       }
-    }, 0);
+    }, 200);
   };
 
   render() {
@@ -61,8 +60,9 @@ export class Content extends React.Component {
             transitionTime={1000}
             infiniteLoop={true} useKeyboardArrows={true}>
             {images.map((URL, index) => (
-              <div className="slide">
-                <Image alt="image in the carousel" src={URL} key={index} />
+              <div className="slide" key={index}>
+                <Image alt="image in the carousel" src={URL}/>
+
               </div>
             ))}
           </Carousel>

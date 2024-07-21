@@ -15,7 +15,12 @@
 
 
 .office-info {
+  width: fit-content;
   font-size: calc(7px + 1vmin);
+  background: rgb(0, 0, 0, 0.30);
+  color: white;
+  text-align: justify;
+  margin: 5px;
 }
 
 /* Header.css */
