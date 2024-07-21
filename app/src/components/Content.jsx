@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -11,10 +11,28 @@ import lawyers2 from "../assets/lawyers2.png";
 import lawyers3 from "../assets/lawyers3.png";
 import lawyers4 from "../assets/lawyers4.png";
 
-const images = [lawyers1, lawyers2, lawyers3, lawyers4];
+const images = [
+  {
+    URL: lawyers1,
+    labelHeader: "Наші досягнення",
+    labelText: "Захистили N клієнтів від кримінального переслідування",
+  },
+  {
+    URL: lawyers2,
+    labelHeader: "Захист від кримінального переслідування",
+    labelText: "Ми вас захистимо ніжно і надійсно",
+  },{
+    URL: lawyers3,
+    labelHeader: "Цивільні справи",
+    labelText: "Краще нас лише Мама Тереза",
+  },{
+    URL: lawyers4,
+    labelHeader: "Спори з податковим органом",
+    labelText: "Що там спорити і так ясно, що їхні вимоги незаконні",
+  },
+];
 
 export class Content extends React.Component {
-
   constructor(props) {
     super(props);
     this.carouselRef = React.createRef();
@@ -25,11 +43,11 @@ export class Content extends React.Component {
 
   componentDidMount() {
     this.updateCarouselHeight();
-    window.addEventListener('resize', this.updateCarouselHeight);
+    window.addEventListener("resize", this.updateCarouselHeight);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateCarouselHeight);
+    window.removeEventListener("resize", this.updateCarouselHeight);
   }
 
   updateCarouselHeight = () => {
@@ -51,26 +69,31 @@ export class Content extends React.Component {
           <Carousel
             animationHandler="fade"
             ref={this.carouselRef}
-            className='carousel-fullwidth'
+            className="carousel-fullwidth"
             interval={carouselInterval}
             autoPlay={true}
             showArrows={false}
             showStatus={false}
             showThumbs={false}
             transitionTime={1000}
-            infiniteLoop={true} useKeyboardArrows={true}>
-            {images.map((URL, index) => (
+            infiniteLoop={true}
+            useKeyboardArrows={true}
+          >
+            {images.map((obj, index) => (
               <div className="slide" key={index}>
-                <Image alt="image in the carousel" src={URL}/>
-
+                <Image alt="lawyers image for the carousel" src={obj.URL} />
+                <div className="legend carousel-caption">
+                  <h3 className="carousel-caption-text">{obj.labelHeader}</h3>
+                  <p className="carousel-caption-text">{obj.labelText}</p>
+                </div>
               </div>
             ))}
           </Carousel>
         </div>
-        <Container className='container-fluid container-content'>
+        <Container className="container-fluid container-content">
           <Row>
-            <Col className='col-12 main-section-text'>
-            Юридична особа АДВОКАТСЬКЕ ОБ'ЄДНАННЯ СОФЯК ТА ПАРТНЕРИ, код
+            <Col className="col-12 main-section-text">
+              Юридична особа АДВОКАТСЬКЕ ОБ'ЄДНАННЯ СОФЯК ТА ПАРТНЕРИ, код
               ЄДРПОУ 38843726, було зареєстровано 02.09.2013. Розмір статутного
               капіталу юридичної особи складає 20 000,00. На момент останнього
               оновлення даних 19.07.2024 статус юридичної особи - Не перебуває в
@@ -88,12 +111,8 @@ export class Content extends React.Component {
               місто Чернівці, ВУЛИЦЯ ПРУТСЬКА, будинок **
             </Col>
           </Row>
-          <Row>
-            Наші послуги
-          </Row>
-          <Row>
-            Адреса:
-          </Row>
+          <Row>Наші послуги</Row>
+          <Row>Адреса:</Row>
         </Container>
       </main>
     );
