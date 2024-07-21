@@ -2,6 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vicgrygorchyk.github.io/lawyer-website/",
   "dependencies": {
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
