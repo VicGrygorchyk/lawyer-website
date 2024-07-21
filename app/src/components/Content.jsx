@@ -3,6 +3,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import ListGroup from 'react-bootstrap/ListGroup';
 import { LawyersCarousel } from "./Carousel";
 import "./Content.css";
 
@@ -66,8 +67,51 @@ export class Content extends React.Component {
               місто Чернівці, ВУЛИЦЯ ПРУТСЬКА, будинок **
             </Col>
           </Row>
-          <Row>Наші послуги</Row>
-          <Row>Адреса:</Row>
+          <Row>
+            <h1>Наші послуги</h1>
+            <h3 className="nav-header h2">Кримінальні справи</h3>
+            <ListGroup variant="flush">
+              <ListGroup.Item>Надання консультацій</ListGroup.Item>
+              <ListGroup.Item>Захист підозрюваних</ListGroup.Item>
+              <ListGroup.Item>Захист потерпілих</ListGroup.Item>
+              <ListGroup.Item>Участь у суді</ListGroup.Item>
+            </ListGroup>
+            <h3 className="nav-header h2">Цивільні справи</h3>
+            <ListGroup variant="flush">
+              <ListGroup.Item>Надання консультацій</ListGroup.Item>
+              <ListGroup.Item>Захист підозрюваних</ListGroup.Item>
+              <ListGroup.Item>Захист потерпілих</ListGroup.Item>
+              <ListGroup.Item>Участь у суді</ListGroup.Item>
+            </ListGroup>
+            <h3 className="nav-header h2">Господарські справи</h3>
+            <ListGroup variant="flush">
+              <ListGroup.Item>Надання консультацій</ListGroup.Item>
+              <ListGroup.Item>Захист підозрюваних</ListGroup.Item>
+              <ListGroup.Item>Захист потерпілих</ListGroup.Item>
+              <ListGroup.Item>Участь у суді</ListGroup.Item>
+            </ListGroup>
+            <h3 className="nav-header h2">Справи про адміністративні правопорушення</h3>
+            <ListGroup variant="flush">
+              <ListGroup.Item>Надання консультацій</ListGroup.Item>
+              <ListGroup.Item>Захист підозрюваних</ListGroup.Item>
+              <ListGroup.Item>Захист потерпілих</ListGroup.Item>
+              <ListGroup.Item>Участь у суді</ListGroup.Item>
+            </ListGroup>
+            <h3 className="nav-header h2">Юридичний супровід бізнесу</h3>
+            <ListGroup variant="flush">
+              <ListGroup.Item>Надання консультацій</ListGroup.Item>
+              <ListGroup.Item>Захист підозрюваних</ListGroup.Item>
+              <ListGroup.Item>Захист потерпілих</ListGroup.Item>
+              <ListGroup.Item>Участь у суді</ListGroup.Item>
+            </ListGroup>
+          </Row>
+          <Row>
+            <h1>Наші контакти:</h1>
+            <p>Телефон +38 095 589-0660</p>
+            <p>Електронна скринька sofiak_and_partners@ukr.net</p>
+            <p>Адреса місто Чернівці, вулиця Прутська, 16</p>
+            <p>Графік роботи Пн-Пт 9:00 - 19:00</p>
+          </Row>
         </Container>
       </main>
     );

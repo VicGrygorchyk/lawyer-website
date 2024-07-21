@@ -17,12 +17,12 @@ const images = [
   {
     URL: lawyers2,
     labelHeader: "Захист від кримінального переслідування",
-    labelText: "Ми вас захистимо ніжно і надійсно",
+    labelText: "Ми вас захистимо ніжно і надійно",
   },
   {
     URL: lawyers3,
-    labelHeader: "Цивільні справи",
-    labelText: "Краще нас лише Мама Тереза",
+    labelHeader: "Наші проєкти",
+    labelText: "Кращі ніж наші проєкти ще не придумали",
   },
   {
     URL: lawyers4,
