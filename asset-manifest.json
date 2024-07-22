@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lawyer-website/static/css/main.2661a382.css",
-    "main.js": "/lawyer-website/static/js/main.28cf9198.js",
+    "main.js": "/lawyer-website/static/js/main.c3702c52.js",
     "static/media/lawyers1.png": "/lawyer-website/static/media/lawyers1.b443979995901a17e65c.png",
     "static/media/lawyers2.png": "/lawyer-website/static/media/lawyers2.5cb415afb2f5b5639164.png",
     "static/media/lawyers3.png": "/lawyer-website/static/media/lawyers3.9701d6f9bb522a13820e.png",
@@ -9,10 +9,10 @@
     "static/media/sofiak_logo.jpg": "/lawyer-website/static/media/sofiak_logo.d44d7f0774f3b3cc2545.jpg",
     "index.html": "/lawyer-website/index.html",
     "main.2661a382.css.map": "/lawyer-website/static/css/main.2661a382.css.map",
-    "main.28cf9198.js.map": "/lawyer-website/static/js/main.28cf9198.js.map"
+    "main.c3702c52.js.map": "/lawyer-website/static/js/main.c3702c52.js.map"
   },
   "entrypoints": [
     "static/css/main.2661a382.css",
-    "static/js/main.28cf9198.js"
+    "static/js/main.c3702c52.js"
   ]
 }
