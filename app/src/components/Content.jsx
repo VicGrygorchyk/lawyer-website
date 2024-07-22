@@ -27,7 +27,7 @@ export class Content extends React.Component {
     window.removeEventListener("resize", this.updateCarouselHeight);
   }
 
-  updateCarouselHeight = (time = 200) => {
+  updateCarouselHeight = (time = 250) => {
     setTimeout(() => {
       if (this.carouselRef.current) {
         const height = this.carouselRef.current.carouselWrapperRef.offsetHeight;
