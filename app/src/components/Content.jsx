@@ -15,7 +15,7 @@ export class Content extends React.Component {
     this.state = {
       carouselHeight: 0,
     };
-    this.updateCarouselHeight(0);
+    this.updateCarouselHeight(10);
   }
 
   componentDidMount() {
@@ -41,13 +41,13 @@ export class Content extends React.Component {
     const { carouselHeight } = this.state;
 
     return (
-      <main className="main" style={{ marginTop: carouselHeight }}>
+      <main id="home" className="main" style={{ marginTop: carouselHeight }}>
         <LawyersCarousel
           carouselRef={this.carouselRef}
           carouselInterval={carouselInterval}
         ></LawyersCarousel>
         <Container className="container-fluid container-content">
-          <Row>
+          <Row id="about-us">
             <Col className="col-12 main-section-text">
               Юридична особа АДВОКАТСЬКЕ ОБ'ЄДНАННЯ СОФЯК ТА ПАРТНЕРИ, код
               ЄДРПОУ 38843726, було зареєстровано 02.09.2013. Розмір статутного
@@ -67,7 +67,7 @@ export class Content extends React.Component {
               місто Чернівці, ВУЛИЦЯ ПРУТСЬКА, будинок **
             </Col>
           </Row>
-          <Row>
+          <Row id="services">
             <h1>Наші послуги</h1>
             <h3 className="nav-header h2">Кримінальні справи</h3>
             <ListGroup variant="flush">
@@ -105,7 +105,7 @@ export class Content extends React.Component {
               <ListGroup.Item>Участь у суді</ListGroup.Item>
             </ListGroup>
           </Row>
-          <Row>
+          <Row id="contacts">
             <h1>Наші контакти:</h1>
             <p>Телефон +38 095 589-0660</p>
             <p>Електронна скринька sofiak_and_partners@ukr.net</p>
