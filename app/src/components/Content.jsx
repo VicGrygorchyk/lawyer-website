@@ -29,15 +29,18 @@ export class Content extends React.Component {
   updateCarouselHeight = (time = 250) => {
     setTimeout(() => {
       if (this.carouselRef.current) {
-        const height = this.carouselRef.current.carouselWrapperRef.offsetHeight;
-        this.setState({ carouselHeight: height });
+        let height = 0;
+        if (window.innerWidth > 992) {
+          height = this.carouselRef.current.carouselWrapperRef.offsetHeight;
+        }
+        this.setState({ carouselHeight: height, contentHeight: height });
       }
     }, time);
   };
 
   render() {
     const { carouselInterval } = this.props;
-    const { carouselHeight } = this.state;
+    const { carouselHeight, contentHeight } = this.state;
 
     return (
       <main id="home" className="main" style={{ marginTop: carouselHeight }}>
@@ -45,7 +48,7 @@ export class Content extends React.Component {
           carouselRef={this.carouselRef}
           carouselInterval={carouselInterval}
         ></LawyersCarousel>
-        <Container className="container-fluid container-content">
+        <Container className="container-fluid container-content" style={{ marginTop: contentHeight }}>
           <Row id="about-us">
             <Col className="col-12 main-section-text">
               Юридична особа АДВОКАТСЬКЕ ОБ'ЄДНАННЯ СОФЯК ТА ПАРТНЕРИ, код
