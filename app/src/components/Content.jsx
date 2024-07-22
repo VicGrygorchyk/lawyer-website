@@ -15,7 +15,6 @@ export class Content extends React.Component {
     this.state = {
       carouselHeight: 0,
     };
-    this.updateCarouselHeight(10);
   }
 
   componentDidMount() {
