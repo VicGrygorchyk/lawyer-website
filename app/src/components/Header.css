@@ -46,11 +46,21 @@
   transition: transform 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after, 
+.nav-link:active::after {
   transform: scaleX(1);
 }
 
+.navbar-nav .nav-link.active {
+  color: white !important;
+}
+
 .nav-link:hover,
+.nav-link:active,
+.nav-link.show {
+  color: rgb(255, 88, 88) !important;
+}
+
 .navbar-brand:hover {
-  color: rgb(255, 88, 88);
+  color: white !important;
 }

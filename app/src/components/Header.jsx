@@ -7,7 +7,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import logo from "../assets/sofiak_logo.jpg";
 
-
 export class Header extends React.Component {
   render() {
     return (
@@ -24,27 +23,21 @@ export class Header extends React.Component {
         <Row>
           <Navbar variant="underline" expand="lg">
             <Navbar.Brand href="#home">
-            <img
-              alt=""
-              src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{' '}
-              {this.props.title}
+              <img
+                alt=""
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />{" "}
+              {this.props.title}             
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#about-us" className="nav-link">
-                  Про нас
-                </Nav.Link>
-                <Nav.Link href="#services" className="nav-link">
-                  Послуги
-                </Nav.Link>
-                <Nav.Link href="#contacts" className="nav-link">
-                  Контакти
-                </Nav.Link>
+                <Nav.Link href="#about-us">Про нас</Nav.Link>
+                <Nav.Link href="#services">Послуги</Nav.Link>
+                <Nav.Link href="#contacts">Контакти</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
